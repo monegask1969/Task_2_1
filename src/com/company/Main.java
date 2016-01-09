@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
+import static com.company.More_less_medium_length.less_medium_length;
 import static com.company.Shortest_longest_number.longest;
 import static com.company.Shortest_longest_number.shortest;
 import static com.company.Sort_length_increase_value.sort_length_decrease_value;
@@ -22,6 +23,7 @@ public class Main {
        // longest(arr); // самое длинное число
        // sort_length_increase_value(arr); //вывод чисел в порядке возрастания
        // sort_length_decrease_value(arr); //вывод чисел в порядке убывания
+       // less_medium_length(arr); // числа, длина которых меньше (больше) средней, а также длинa
 
     }
 }

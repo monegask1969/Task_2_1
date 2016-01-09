@@ -20,15 +20,15 @@ public class Shortest_longest_number {
     }
     public static void longest(int[] arr){
         String number;
-        String shortt = Integer.toString(arr[0]);
+        String longest = Integer.toString(arr[0]);
         for(Integer numb : arr){
             number = numb.toString();
             for(int i=0; i<arr.length; i++){
-                if(number.length() >= shortt.length()){
-                    shortt = number;
+                if(number.length() >= longest.length()){
+                    longest = number;
                 }
             }
         }
-        System.out.println("Here the longest number: " + shortt);
+        System.out.println("Here the longest number: " + longest);
     }
 }
