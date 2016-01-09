@@ -8,7 +8,6 @@ public class More_less_medium_length {
     public static void less_medium_length(int[] arr){
         int average = 0;
         String number;
-        String tmp;
         for(Integer numb : arr){
             number = numb.toString();
             average = number.length() + average;
