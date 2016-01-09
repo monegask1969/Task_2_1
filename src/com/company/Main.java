@@ -2,7 +2,10 @@ package com.company;
 
 import java.util.Scanner;
 
+import static com.company.Shortest_longest_number.longest;
 import static com.company.Shortest_longest_number.shortest;
+import static com.company.Sort_length_increase_value.sort_length_decrease_value;
+import static com.company.Sort_length_increase_value.sort_length_increase_value;
 
 public class Main {
 
@@ -15,6 +18,10 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = scan.nextInt();
         }
-        //shortest(arr);
+       // shortest(arr); //самое короткое число
+       // longest(arr); // самое длинное число
+       // sort_length_increase_value(arr); //вывод чисел в порядке возрастания
+       // sort_length_decrease_value(arr); //вывод чисел в порядке убывания
+
     }
 }
