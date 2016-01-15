@@ -5,35 +5,40 @@ package com.company;
  */
 public class Increasing_numbers {
     public static void increasing_numbers(int[] arr) {
+
         char[] ch;
         String tmp;
-        char[] ch2;
+
 
         for(int i=0; i<arr.length; i++)
         {
             tmp = Integer.toString(arr[i]);
             ch = tmp.toCharArray();
-            sortion_check(ch);
-        }
-    }
+            char[] ch2 = ch.clone();
 
-    public static void sortion_check(char[] ch){
-        char[] ch2;
-        ch2 = ch;
-        for (int barrier = ch2.length - 1; barrier >= 0; barrier--) {
-            for (int index = 0; index < barrier; index++) {
-                if (ch2[index] > ch2[index + 1]) {
-                    char tmp = ch2[index];
-                    ch2[index] = ch2[index + 1];
-                    ch2[index + 1] = tmp;
+            for (int j = 0; j < ch2.length-1 ; j++)           //проходимся по каждой цифре в числе ch2 и сортируем массив
+            {
+                if(ch2[j] !=0) {
+                    if(ch2[j] > ch2[j+1]) {
+                        char tmp2 = ch2[j];
+                        ch2[j] = ch2[j + 1];
+                        ch2[j + 1] = tmp2;
+                    }
                 }
             }
-        }
-        for (int i = 0; i < ch.length ; i++) {
-            if(ch[i] == ch2[i]){
-
+            boolean check = false;
+            for (int j=0; j<ch.length; j++)                     //проходимся по каждой цифре в числе ch
+            {
+                if(ch[j] !=0 && ch2[j] != 0) {
+                    if (ch[j] == ch2[j]) {
+                        check = true;
+                    }
+                }
+            }
+            if(check == true)
+            {
+                System.out.println("Here your number: " + tmp);
             }
         }
-        System.out.println("This amount of numbers is good: " + ch);
     }
 }
