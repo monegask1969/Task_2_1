@@ -29,15 +29,17 @@ public class Increasing_numbers {
             boolean check = false;
             for (int j=0; j<ch.length; j++)                     //проходимся по каждой цифре в числе ch
             {
-                if(ch[j] !=0 && ch2[j] != 0) {
-                    if (ch[j] == ch2[j]) {
-                        check = true;
+                if(j>0) {
+                    if (ch[j] != 0 && ch2[j] != 0) {
+                        if (ch[j] == ch2[j]) {
+                            check = true;
+                        }
                     }
                 }
             }
             if(check == true)
             {
-                System.out.println("Here your number: " + tmp);
+                System.out.println("The number, where elements are increasing: " + tmp);
             }
         }
     }
